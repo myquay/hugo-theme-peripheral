@@ -1,0 +1,12 @@
+name = "Peripheral"
+license = "MIT"
+licenselink = "https://github.com/myquay/hugo-theme-peripheral/blob/main/LICENSE"
+description = ""
+homepage = "https://github.com/myquay/hugo-theme-peripheral"
+tags = []
+features = []
+min_version = "0.111.3"
+
+[author]
+  name = "Michael McKenna"
+  homepage = "https://michael-mckenna.com/"

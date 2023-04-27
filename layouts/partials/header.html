@@ -1,0 +1,10 @@
+<div class="flex flex-row space-between mt-2 mb-min">
+    <ul class="list-no-style flex flex-row p-0">
+        {{ range .Site.Menus.main.ByWeight }}
+        <li class="mr-1">
+            <a class="no-decoration nav boldest fs-lge" title="{{ .Name }}" href="{{ .URL  | relLangURL }}">{{ .Name
+                }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</div>

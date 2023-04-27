@@ -1,0 +1,167 @@
+* {
+    font-family: Garamond, Georgia, serif;
+    color: #121727;
+    text-rendering: optimizeLegibility;
+}
+
+/*****************
+***** COLORS *****
+*****************/
+
+.color-parchment{
+    background-color: #f8f3e1;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.no-decoration{
+    text-decoration: none;
+}
+
+.boldest{
+    font-weight: 800;
+}
+
+.light{
+    font-weight: 300;
+}
+
+
+.fs-lge{
+    font-size: large;
+}
+
+.fs-sm{
+    font-size:small;
+}
+
+/*****************
+***** LAYOUT *****
+*****************/
+
+.mr-1{
+    margin-right: 1rem;
+}
+
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mb-min{
+    margin-bottom: 0.5rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.mv-1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mv-2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.m-auto{
+    margin: auto;
+}
+
+.p-0{
+    padding: 0;
+}
+
+.pv-min{
+    padding: 0.6rem 0 0.6rem 0;
+}
+
+#content{
+    max-width: 100%;
+}
+
+/*****************
+*** DECORATION ***
+*****************/
+
+.border-top{
+    border-top: 1px solid #121727CC;
+}
+
+.border-bottom{
+    border-bottom: 1px solid #121727CC;
+}
+
+/******************
+****** LISTS ******
+******************/
+
+.list-no-style{
+    list-style: none;
+}
+
+/******************
+****** LINKS ******
+******************/
+
+a.nav{
+    color: #292824;
+}
+
+a.nav:hover{
+    color: #595854;
+}
+
+/******************
+**** RESPONSIVE ***
+******************/
+
+/*sm*/
+@media (min-width: 576px) { 
+
+ }
+
+ /*md*/
+@media (min-width: 768px) { 
+
+ }
+
+/*lg*/
+@media (min-width: 992px) { 
+    #content{
+        max-width: 80%;
+    }
+ }
+
+/*xl*/
+@media (min-width: 1200px) { 
+    #content{
+        max-width: 950px;
+    }
+ }
+
+/*xxl*/
+@media (min-width: 1400px) { 
+    #content{
+        max-width: 950px;
+    }
+ }

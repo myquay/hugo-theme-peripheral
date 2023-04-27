@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+
+<body class="color-parchment">
+    <div id="content" class="m-auto">
+        {{- partial "header.html" . -}}
+        {{- block "main" . }}{{- end }}
+        {{- partial "footer.html" . -}}
+    </div>
+</body>
+
+</html>
