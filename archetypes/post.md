@@ -1,3 +1,3 @@
 ---
-subtitle:
+url: /blog
 ---

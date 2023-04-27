@@ -24,6 +24,10 @@
     font-weight: 800;
 }
 
+.bolder{
+    font-weight: 600;
+}
+
 .light{
     font-weight: 300;
 }
@@ -35,6 +39,32 @@
 
 .fs-sm{
     font-size:small;
+}
+
+.ft-condense{
+    letter-spacing: -1px;
+}
+
+.highlight pre{
+ padding: 15px;
+ border-radius: 5px;
+}
+
+code span{
+    font-family: monospace !important;
+}
+
+.sans-serif{
+    font-family: helvetica, sans-serif;
+}
+
+.fs-xl{
+    font-size: 3em;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: helvetica, sans-serif;
 }
 
 /*****************
@@ -49,6 +79,18 @@
     margin-top: 1rem;
 }
 
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.mb-2{
+    margin-bottom: 3rem;
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
 .mb-min{
     margin-bottom: 0.5rem;
 }
@@ -57,9 +99,51 @@
     margin-top: 2rem;
 }
 
+.mv-0{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .mv-1{
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.pv-1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.p-0{
+    padding: 0;
+}
+
+.pr-0{
+    padding-right: 0;
+}
+
+.pb-0{
+    padding-bottom: 0;
+}
+
+.pv-min{
+    padding: 0.6rem 0 0.6rem 0;
+}
+
+.pb-min{
+    padding-bottom: 0.6rem;
+}
+
+.pb-1{
+    padding-bottom: 1rem;
+}
+
+.pr-15{
+    padding-right: 15px;
+}
+
+.pr-30{
+    padding-right: 30px;
 }
 
 .mv-2{
@@ -79,24 +163,29 @@
     flex-direction: column;
 }
 
+.flex-grow-1{
+    flex-grow: 1;
+}
+
 .space-between{
     justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
 }
 
 .m-auto{
     margin: auto;
 }
 
-.p-0{
-    padding: 0;
-}
-
-.pv-min{
-    padding: 0.6rem 0 0.6rem 0;
-}
-
 #content{
     max-width: 100%;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
 }
 
 /*****************
@@ -111,6 +200,18 @@
     border-bottom: 1px solid #121727CC;
 }
 
+.border-left{
+    border-left: 1px solid #12172733;
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: initial;
+}
+
 /******************
 ****** LISTS ******
 ******************/
@@ -123,12 +224,15 @@
 ****** LINKS ******
 ******************/
 
-a.nav{
+a{
     color: #292824;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-a.nav:hover{
+a:hover{
     color: #595854;
+    text-decoration: underline;
 }
 
 /******************
@@ -142,8 +246,16 @@ a.nav:hover{
 
  /*md*/
 @media (min-width: 768px) { 
-
- }
+    .visible-md{
+        display: initial;
+    }
+    .pr-30-md{
+        padding-right: 30px;
+    }
+    .flex-md{
+        display: flex;
+    }
+}
 
 /*lg*/
 @media (min-width: 992px) { 

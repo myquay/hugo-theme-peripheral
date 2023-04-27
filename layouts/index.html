@@ -1,12 +1,5 @@
 {{ define "main" }}
 
-<div class="border-top border-bottom pv-min fs-sm light flex flex-row space-between">
-    {{if .Site.Params.Peripheral.GitInfo.Enabled}}
-    <a class="no-decoration" title="{{.Site.Params.Peripheral.GitInfo.Subject}}" href="{{.Site.Params.Peripheral.GitInfo.Repository}}/commit/{{.Site.Params.Peripheral.GitInfo.Hash}}">Commit {{.Site.Params.Peripheral.GitInfo.AbbreviatedHash}}</a>
-    {{end}}
-    <div>{{.Site.Params.Peripheral.subtitle}}</div>
-    <div>{{.Site.Params.Peripheral.location}}</div>
-</div>
 <div>
     <div>
         SIDE BAR
