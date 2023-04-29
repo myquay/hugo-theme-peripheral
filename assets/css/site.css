@@ -1,5 +1,5 @@
 * {
-    font-family: Garamond, Georgia, serif;
+    font-family: Georgia, serif;
     color: #121727;
     text-rendering: optimizeLegibility;
 }
@@ -8,182 +8,230 @@
 ***** COLORS *****
 *****************/
 
-.color-parchment{
-    background-color: #f8f3e1;
+.color-parchment {
+    background-color: #f8f6ec;
 }
 
-.uppercase{
+.uppercase {
     text-transform: uppercase;
 }
 
-.no-decoration{
+.italic {
+    font-style: italic;
+}
+
+.no-decoration {
     text-decoration: none;
 }
 
-.boldest{
+.boldest {
     font-weight: 800;
 }
 
-.bolder{
+.bolder {
     font-weight: 600;
 }
 
-.light{
+.light {
     font-weight: 300;
 }
 
 
-.fs-lge{
+.fs-lge {
     font-size: large;
 }
 
-.fs-sm{
-    font-size:small;
+.fs-sm {
+    font-size: small;
 }
 
-.ft-condense{
+.ft-condense {
     letter-spacing: -1px;
 }
 
-.highlight pre{
- padding: 15px;
- border-radius: 5px;
+.highlight pre {
+    padding: 15px;
+    border-radius: 5px;
 }
 
-code span{
+code span {
     font-family: monospace !important;
 }
 
-.sans-serif{
+.sans-serif {
     font-family: helvetica, sans-serif;
 }
 
-.fs-xl{
+.fs-xl {
     font-size: 3em;
     font-weight: 400;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: helvetica, sans-serif;
+}
+
+.highlight span {
+    color: #d8dee9;
 }
 
 /*****************
 ***** LAYOUT *****
 *****************/
 
-.mr-1{
+.mr-1 {
     margin-right: 1rem;
 }
 
-.mt-1{
+.mt-1 {
     margin-top: 1rem;
 }
 
-.mb-1{
-    margin-bottom: 1rem;
-}
-
-.mb-2{
-    margin-bottom: 3rem;
-}
-
-.mb-0{
-    margin-bottom: 0;
-}
-
-.mb-min{
-    margin-bottom: 0.5rem;
-}
-
-.mt-2{
+.mt-2 {
     margin-top: 2rem;
 }
 
-.mv-0{
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 3rem;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-min {
+    margin-bottom: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mv-4 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.mv-0 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.mv-1{
+.mv-1 {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-.pv-1{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.p-0{
-    padding: 0;
-}
-
-.pr-0{
-    padding-right: 0;
-}
-
-.pb-0{
-    padding-bottom: 0;
-}
-
-.pv-min{
-    padding: 0.6rem 0 0.6rem 0;
-}
-
-.pb-min{
-    padding-bottom: 0.6rem;
-}
-
-.pb-1{
-    padding-bottom: 1rem;
-}
-
-.pr-15{
-    padding-right: 15px;
-}
-
-.pr-30{
-    padding-right: 30px;
-}
-
-.mv-2{
+.mv-2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.flex{
+
+.m-2 {
+    margin: 2rem;
+}
+
+.pv-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.pr-0 {
+    padding-right: 0;
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
+
+.pb-3 {
+    padding-bottom: 3rem;
+}
+
+.pv-min {
+    padding: 0.6rem 0 0.6rem 0;
+}
+
+.pb-min {
+    padding-bottom: 0.6rem;
+}
+
+.pb-1 {
+    padding-bottom: 1rem;
+}
+
+.pr-15 {
+    padding-right: 15px;
+}
+
+.pr-30 {
+    padding-right: 30px;
+}
+
+.mv-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.flex {
     display: flex;
 }
 
-.flex-row{
+.flex-row {
     flex-direction: row;
 }
 
-.flex-column{
+.flex-column {
     flex-direction: column;
 }
 
-.flex-grow-1{
+.flex-grow-1 {
     flex-grow: 1;
 }
 
-.space-between{
+.space-between {
     justify-content: space-between;
 }
 
-.align-center{
+.align-center {
     align-items: center;
 }
 
-.m-auto{
+.m-auto {
     margin: auto;
 }
 
-#content{
+#content {
     max-width: 100%;
 }
 
-.sticky{
+.sticky {
     position: sticky;
     top: 0;
 }
@@ -192,23 +240,27 @@ h1,h2,h3,h4,h5,h6{
 *** DECORATION ***
 *****************/
 
-.border-top{
+.border {
+    border: 1px solid #121727CC;
+}
+
+.border-top {
     border-top: 1px solid #121727CC;
 }
 
-.border-bottom{
+.border-bottom {
     border-bottom: 1px solid #121727CC;
 }
 
-.border-left{
+.border-left {
     border-left: 1px solid #12172733;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.visible{
+.visible {
     display: initial;
 }
 
@@ -216,7 +268,7 @@ h1,h2,h3,h4,h5,h6{
 ****** LISTS ******
 ******************/
 
-.list-no-style{
+.list-no-style {
     list-style: none;
 }
 
@@ -224,15 +276,69 @@ h1,h2,h3,h4,h5,h6{
 ****** LINKS ******
 ******************/
 
-a{
+a {
     color: #292824;
     text-decoration: none;
     font-weight: bold;
 }
 
-a:hover{
+.post a{
+    font-weight: normal;
+    color: #aa0505;
+}
+
+a:hover {
     color: #595854;
     text-decoration: underline;
+}
+
+.post h3, .post h2, .post h4{
+    padding-top: 20px;
+}
+
+/******************
+******* QUOTE *****
+******************/
+
+blockquote {
+    color: #555555;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 8px solid #d1b758;
+    line-height: 1.6;
+    position: relative;
+    background: #EDEDED;
+    margin: 0;
+}
+
+blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: #d1b758;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+.callout {
+    color: #555555;
+    padding: 1em;
+    border: 1px solid #d1b758;
+    line-height: 1.6;
+    position: relative;
+    background: #EDEDED;
+}
+
+pre{
+    overflow-x: auto;
+}
+
+p code{
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #d8dee9;
+    background-color: #2e3440;
+    border-radius: 4px;
 }
 
 /******************
@@ -240,40 +346,40 @@ a:hover{
 ******************/
 
 /*sm*/
-@media (min-width: 576px) { 
+@media (min-width: 576px) {}
 
- }
-
- /*md*/
-@media (min-width: 768px) { 
-    .visible-md{
+/*md*/
+@media (min-width: 768px) {
+    .visible-md {
         display: initial;
     }
-    .pr-30-md{
+
+    .pr-30-md {
         padding-right: 30px;
     }
-    .flex-md{
+
+    .flex-md {
         display: flex;
     }
 }
 
 /*lg*/
-@media (min-width: 992px) { 
-    #content{
+@media (min-width: 992px) {
+    #content {
         max-width: 80%;
     }
- }
+}
 
 /*xl*/
-@media (min-width: 1200px) { 
-    #content{
+@media (min-width: 1200px) {
+    #content {
         max-width: 950px;
     }
- }
+}
 
 /*xxl*/
-@media (min-width: 1400px) { 
-    #content{
+@media (min-width: 1400px) {
+    #content {
         max-width: 950px;
     }
- }
+}

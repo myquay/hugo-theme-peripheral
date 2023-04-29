@@ -2,6 +2,14 @@
 <html>
 {{- partial "head.html" . -}}
 
+{{ $fromString := "%5c"}}
+
+{{ $toString := "%2f"}}
+{{ $finalString := replace .File.Path $fromString $toString}}
+
+{{ $toString := "%2f"}}
+{{ $finalString := replace .File.Path "\\" "/"}}
+
 <body class="color-parchment">
     <div id="content" class="m-auto">
         {{- partial "header.html" . -}}
@@ -9,9 +17,17 @@
         <h1 class="pb-0 mb-0 sans-serif fs-xl">{{.Title}}</h1>
         <div class="mb-2">{{.Lastmod.Format .Site.Params.Peripheral.dateFormat}}</div>
 
+        <div class="post">
         {{.Content}}
+        </div>
 
         {{- block "main" . }}{{- end }}
+
+        {{if .Site.Params.Peripheral.GitInfo.Enabled}}
+        <div class="mv-4 p-1 italic callout">
+            Noticed an error or omission? Please look at <a href="{{.Site.Params.Peripheral.GitInfo.repository}}/edit/main/blog/content/{{$finalString}}">submitting a pull request</a>.
+        </div>
+        {{end}}
 
         {{- partial "footer.html" . -}}
     </div>
