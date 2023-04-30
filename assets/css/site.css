@@ -129,6 +129,10 @@ h6 {
     margin-bottom: 4rem;
 }
 
+.m-0 {
+    margin: 0;
+}
+
 .mv-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -294,6 +298,10 @@ a:hover {
 
 .post h3, .post h2, .post h4{
     padding-top: 20px;
+}
+
+.post img{
+    max-width: 100%;
 }
 
 /******************
