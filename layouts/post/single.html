@@ -68,7 +68,7 @@
         {{if .Site.Params.Peripheral.GitInfo.Enabled}}
         <div class="mv-4 p-1 italic callout">
             Noticed an error or omission? Please look at <a
-                href="{{.Site.Params.Peripheral.GitInfo.repository}}/edit/main/blog/content/{{$finalString}}">submitting
+                href="{{.Site.Params.Peripheral.GitInfo.repository}}/edit/{{.Site.Params.Peripheral.GitInfo.branch}}/blog/content/{{$finalString}}">submitting
                 a pull request</a>.
         </div>
         {{end}}
