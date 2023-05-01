@@ -1,1 +1,19 @@
-SINGLE
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+
+<body class="color-parchment">
+    <div id="content" class="m-auto">
+        {{- partial "header.html" . -}}
+
+        <h1 class="pb-0 mb-0 sans-serif fs-xl">{{.Title}}</h1>
+
+        {{.Content}}
+
+        {{- block "main" . }}{{- end }}
+
+        {{- partial "footer.html" . -}}
+    </div>
+</body>
+
+</html>
