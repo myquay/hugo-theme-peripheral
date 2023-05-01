@@ -2,7 +2,7 @@
     <ul class="list-no-style flex flex-row p-0">
         {{ range .Site.Menus.main.ByWeight }}
         <li class="mr-1">
-            <a class="no-decoration nav boldest fs-lge" title="{{ .Name }}" href="{{ .URL  | relLangURL }}">{{ .Name
+            <a class="no-decoration nav bolder fs-lge" title="{{ .Name }}" href="{{ .URL  | relLangURL }}">{{ .Name
                 }}</a>
         </li>
         {{ end }}
@@ -11,7 +11,7 @@
 
 <div class="border-top border-bottom pv-min fs-sm light flex flex-row space-between">
     {{if .Site.Params.Peripheral.GitInfo.enabled}}
-    <a class="no-decoration hidden visible-md" title="{{.Site.Params.Peripheral.GitInfo.subject}}" href="{{.Site.Params.Peripheral.GitInfo.repository}}/commit/{{.Site.Params.Peripheral.GitInfo.hash}}">Commit {{.Site.Params.Peripheral.GitInfo.abbreviatedHash}}</a>
+    <a class="no-decoration hidden visible-md light" title="{{.Site.Params.Peripheral.GitInfo.subject}}" href="{{.Site.Params.Peripheral.GitInfo.repository}}/commit/{{.Site.Params.Peripheral.GitInfo.hash}}">Commit {{.Site.Params.Peripheral.GitInfo.abbreviatedHash}}</a>
     {{end}}
     <div>{{.Site.Params.Peripheral.subtitle}}</div>
     <div class="hidden visible-md">{{.Site.Params.Peripheral.location}}</div>
