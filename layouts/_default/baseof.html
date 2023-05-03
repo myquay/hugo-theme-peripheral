@@ -4,8 +4,10 @@
 
 <body class="color-parchment">
     <div id="content" class="m-auto">
-        {{- partial "header.html" . -}}
-        {{- block "main" . }}{{- end }}
+        <div id="content-wrap">
+            {{- partial "header.html" . -}}
+            {{- block "main" . }}{{- end }}
+        </div>
         {{- partial "footer.html" . -}}
     </div>
 </body>

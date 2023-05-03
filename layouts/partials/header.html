@@ -1,8 +1,11 @@
-<div class="flex flex-row space-between mt-2 mb-min">
+<div class="flex flex-row space-between mb-min">
     <ul class="list-no-style flex flex-row p-0">
+        {{$page := .Page }}
+
         {{ range .Site.Menus.main.ByWeight }}
+        {{ $active := cond (or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .)) "active" "" }}
         <li class="mr-1">
-            <a class="no-decoration nav bolder fs-lge" title="{{ .Name }}" href="{{ .URL  | relLangURL }}">{{ .Name
+            <a class="no-decoration bold nav {{$active}}" title="{{ .Name }}" href="{{ .URL  | relLangURL }}">{{ .Name
                 }}</a>
         </li>
         {{ end }}
@@ -11,7 +14,9 @@
 
 <div class="border-top border-bottom pv-min fs-sm light flex flex-row space-between">
     {{if .Site.Params.Peripheral.GitInfo.enabled}}
+    {{if isset .Site.Params.Peripheral.GitInfo "hash"}}
     <a class="no-decoration hidden visible-md light" title="{{.Site.Params.Peripheral.GitInfo.subject}}" href="{{.Site.Params.Peripheral.GitInfo.repository}}/commit/{{.Site.Params.Peripheral.GitInfo.hash}}">Commit {{.Site.Params.Peripheral.GitInfo.abbreviatedHash}}</a>
+    {{end}}
     {{end}}
     <div>{{.Site.Params.Peripheral.subtitle}}</div>
     <div class="hidden visible-md">{{.Site.Params.Peripheral.location}}</div>

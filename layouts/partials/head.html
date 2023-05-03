@@ -1,2 +1,10 @@
-{{ $css := resources.Get "css/site.css" | minify | fingerprint }}
+{{ $css := resources.Match "**.css" | resources.Concat "hello.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+{{ template "_internal/google_analytics.html" . }}
+
+<title>{{ if .IsHome }}Home - {{ else }}{{ if .Page.Title }}{{ .Page.Title }} - {{ end }}{{ end }}{{ .Site.Title }}</title>
+
+{{- with .Site.Params.Peripheral.favicon }}
+  <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
+{{- end -}}

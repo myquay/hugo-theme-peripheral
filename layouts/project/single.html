@@ -4,15 +4,17 @@
 
 <body class="color-parchment">
     <div id="content" class="m-auto">
-        {{- partial "header.html" . -}}
+        <div id="content-wrap">
+            {{- partial "header.html" . -}}
 
-        <h1 class="pb-0 mb-0 sans-serif fs-xl">{{.Title}}</h1>
-        <div class="mb-2">{{.Lastmod.Format .Site.Params.Peripheral.dateFormat}}</div>
+            <h1 class="pb-0 mb-0 sans-serif fs-xl">{{.Title}}</h1>
+            <div class="mb-2">{{.Lastmod.Format .Site.Params.Peripheral.dateFormat}}</div>
 
-        {{.Content}}
+            {{.Content}}
 
-        {{- block "main" . }}{{- end }}
+            {{- block "main" . }}{{- end }}
 
+        </div>
         {{- partial "footer.html" . -}}
     </div>
 </body>

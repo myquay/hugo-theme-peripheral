@@ -12,67 +12,72 @@
 
 <body class="color-parchment">
     <div id="content" class="m-auto">
-        {{- partial "header.html" . -}}
+        <div id="content-wrap">
+            {{- partial "header.html" . -}}
 
-        <h1 class="pb-0 mb-0 sans-serif fs-xl">{{.Title}}</h1>
-        <div class="mb-2">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</div>
+            <h1 class="pb-0 mb-0 sans-serif fs-xl">{{.Title}}</h1>
+            <div class="mb-2">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</div>
 
-        {{if .Site.Params.Peripheral.Obselence.enabled}}
-        {{if or (.Params.obsolete) (gt (now.Sub .Date).Hours (mul .Site.Params.Peripheral.Obselence.years 356 24)) }}
-        <div class="mv-2 p-1 italic callout">
-            <div class="flex flex-row align-center">
+            {{if .Site.Params.Peripheral.Obselence.enabled}}
+            {{if or (.Params.obsolete) (gt (now.Sub .Date).Hours (mul .Site.Params.Peripheral.Obselence.years 356 24))
+            }}
+            <div class="mv-2 p-1 italic callout">
+                <div class="flex flex-row align-center">
                     <svg class="mr-1" width="24px" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
                         <path
                             d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z" />
                     </svg>
-                <div>
-                    {{.Site.Params.Peripheral.Obselence.message}}
+                    <div>
+                        {{.Site.Params.Peripheral.Obselence.message}}
+                    </div>
                 </div>
             </div>
+            {{end}}
+            {{end}}
+
+            {{if .Site.Params.Peripheral.Series.enabled}}
+            {{if isset .Params "series"}}
+
+            <div class="border p-1 callout">
+                <h3 class="italic m-0 p-0">Posts in this series</h3>
+                <ol>
+                    {{ range (where (where .Site.RegularPages "Type" "post") ".Params.series" .Params.series).ByDate }}
+                    <li>
+                        {{if eq $.Params.url .Params.url }}
+                        {{ .Title }} <i>(This post)</i>
+                        {{else }}
+                        <a href="{{.Permalink}}">{{ .Title }}</a>
+                        {{end}}
+                    </li>
+                    {{ end }}
+                    {{if and (.Site.Params.Peripheral.Series.showToBeContinued) (not (index (where (where
+                    .Site.RegularPages "Type" "post") ".Params.series" .Params.series).ByDate.Reverse
+                    0).Params.concludeSeries) }}
+                    <li><i>Series is in progress, next installment still to come.</i></li>
+                    {{ end }}
+                </ol>
+            </div>
+
+            {{end}}
+            {{end}}
+
+
+            <div class="post">
+                {{.Content}}
+            </div>
+
+            {{- block "main" . }}{{- end }}
+
+            {{if .Site.Params.Peripheral.GitInfo.Enabled}}
+            <div class="mv-4 p-1 italic callout">
+                Noticed an error or omission? Please look at <a
+                    href="{{.Site.Params.Peripheral.GitInfo.repository}}/edit/{{.Site.Params.Peripheral.GitInfo.branch}}/blog/content/{{$finalString}}">submitting
+                    a pull request</a>.
+            </div>
+            {{end}}
+
         </div>
-        {{end}}
-        {{end}}
-
-{{if .Site.Params.Peripheral.Series.enabled}}
-{{if isset .Params "series"}}
-
-<div class="border p-1 callout">
-    <h3 class="italic m-0 p-0">Posts in this series</h3>
-    <ol>
-        {{ range  (where (where .Site.RegularPages "Type" "post") ".Params.series" .Params.series).ByDate }}
-            <li>
-                {{if eq $.Params.url .Params.url }}
-                {{ .Title }} <i>(This post)</i>
-                {{else }}
-                <a href="{{.Permalink}}">{{ .Title }}</a>
-                {{end}}
-            </li>
-        {{ end }}
-        {{if and (.Site.Params.Peripheral.Series.showToBeContinued) (not (index (where (where .Site.RegularPages "Type" "post") ".Params.series" .Params.series).ByDate.Reverse 0).Params.concludeSeries) }}
-        <li><i>Series is in progress, next installment still to come.</i></li>
-        {{ end }}
-    </ol>
-</div>
-
-{{end}}
-{{end}}
-
-
-        <div class="post">
-            {{.Content}}
-        </div>
-
-        {{- block "main" . }}{{- end }}
-
-        {{if .Site.Params.Peripheral.GitInfo.Enabled}}
-        <div class="mv-4 p-1 italic callout">
-            Noticed an error or omission? Please look at <a
-                href="{{.Site.Params.Peripheral.GitInfo.repository}}/edit/{{.Site.Params.Peripheral.GitInfo.branch}}/blog/content/{{$finalString}}">submitting
-                a pull request</a>.
-        </div>
-        {{end}}
-
         {{- partial "footer.html" . -}}
     </div>
 </body>

@@ -12,6 +12,10 @@
     background-color: #f8f6ec;
 }
 
+/*****************
+****** FONT *****
+*****************/
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -30,6 +34,10 @@
 
 .bolder {
     font-weight: 600;
+}
+
+.bold {
+    font-weight: 500;
 }
 
 .light {
@@ -305,6 +313,10 @@ a {
     font-weight: bold;
 }
 
+a.active{
+    font-weight: 700;
+}
+
 .post a{
     font-weight: normal;
     color: #aa0505;
@@ -378,6 +390,31 @@ p code{
 }
 
 /******************
+****** FOOTER *****
+******************/
+
+    #content {
+        position: relative;
+        min-height: 100vh;
+    }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+  
+  #footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }
+
+body{
+    margin: 0;
+}
+
+/******************
 **** RESPONSIVE ***
 ******************/
 
@@ -424,3 +461,5 @@ p code{
         max-width: 950px;
     }
 }
+
+
