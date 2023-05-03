@@ -6,7 +6,7 @@
 
 <div class="grid-md mb-2">
     <div class="pt-1">
-        <a href="/blog"><h3>Blog posts</h3><a>
+        <a href="/blog"><h3>Blog posts</h3></a>
         {{ $posts := (where .Site.RegularPages "Section" "post") }}
         {{ range first 5 $posts }}
         <div class="pb-1 pr-30-md pr-0">
