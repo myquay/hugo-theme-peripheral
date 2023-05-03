@@ -1,4 +1,4 @@
-<div class="flex flex-row space-between mb-min">
+<div class="flex flex-row space-between mb-min ph-1">
     <ul class="list-no-style flex flex-row p-0">
         {{$page := .Page }}
 
@@ -12,7 +12,7 @@
     </ul>
 </div>
 
-<div class="border-top border-bottom pv-min fs-sm light flex flex-row space-between">
+<div class="border-top border-bottom pv-min fs-sm light flex flex-row space-between ph-1">
     {{if .Site.Params.Peripheral.GitInfo.enabled}}
     {{if isset .Site.Params.Peripheral.GitInfo "hash"}}
     <a class="no-decoration hidden visible-md light" title="{{.Site.Params.Peripheral.GitInfo.subject}}" href="{{.Site.Params.Peripheral.GitInfo.repository}}/commit/{{.Site.Params.Peripheral.GitInfo.hash}}">Commit {{.Site.Params.Peripheral.GitInfo.abbreviatedHash}}</a>

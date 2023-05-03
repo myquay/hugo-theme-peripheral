@@ -7,9 +7,11 @@
         <div id="content-wrap">
             {{- partial "header.html" . -}}
 
-            <h1 class="pb-0 mb-0 sans-serif fs-xl">{{.Title}}</h1>
-
-            {{.Content}}
+            <div class="ph-1">
+                <h1 class="pb-0 mb-0 sans-serif fs-xl">{{.Title}}</h1>
+    
+                {{.Content}}
+            </div>
 
             {{- block "main" . }}{{- end }}
         </div>

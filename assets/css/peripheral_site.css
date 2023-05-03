@@ -183,6 +183,11 @@ h6 {
     padding: 1rem;
 }
 
+.ph-1{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
 .pr-0 {
     padding-right: 0;
 }
@@ -196,7 +201,8 @@ h6 {
 }
 
 .pv-min {
-    padding: 0.6rem 0 0.6rem 0;
+    padding-bottom: 0.6rem;
+    padding-top: 0.6rem;
 }
 
 .pb-min {
