@@ -10,8 +10,9 @@
             <div class="ph-1">
                 <h1 class="pb-0 mb-0 sans-serif fs-xl">{{.Title}}</h1>
                 <div class="mb-2">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</div>
-
-                {{.Content}}
+                <div class="post">
+                    {{.Content}}
+                </div>
             </div>
             {{- block "main" . }}{{- end }}
         </div>
