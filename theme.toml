@@ -3,8 +3,8 @@ license = "MIT"
 licenselink = "https://github.com/myquay/hugo-theme-peripheral/blob/main/LICENSE"
 description = "A fast, clean, Hugo theme with minimal dependencies"
 homepage = "https://github.com/myquay/hugo-theme-peripheral"
-tags = []
-features = []
+tags = ["blog"]
+features = ["blog"]
 min_version = "0.111.3"
 
 [author]
