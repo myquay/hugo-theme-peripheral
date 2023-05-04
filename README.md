@@ -21,12 +21,14 @@ Series are configured using two settings in the page FrontMatter.
 
 All posts in the same series linked so they can be easily traversed. 
 
-
+<img width="1290" alt="image" src="https://user-images.githubusercontent.com/629527/236220134-23f337c1-161f-40a1-8e27-44fd81dff601.png">
 
 For the last post set `concludeSeries` to true to disable the next post coming soon message.
 
 ### Obsolescence 
 In a fast moving industry like tech, posts can become obsolete pretty quickly. This theme includes the ability to automatically put a note on older content to give the reader a heads up that this is older content.
+
+<img width="1109" alt="image" src="https://user-images.githubusercontent.com/629527/236219847-d1e22b9a-7ad2-4488-99ee-4629709a408c.png">
 
 This can be disabled on a post explicitly by setting the obsolescence feature in the post FrontMatter. 
 
@@ -36,6 +38,7 @@ This can be disabled on a post explicitly by setting the obsolescence feature in
 ### Git Integration 
 If you're hosting your blog source code publicly you can encourage others to fix content by submitting a pull request or show the current commit of the website that has been pushed live.
 
+<img width="1043" alt="image" src="https://user-images.githubusercontent.com/629527/236219256-a51a303c-f70e-4f0a-92e3-b289f6165c96.png">
 
 To get the latest commit information displaying you will need to update the build server to update `config.toml` with the latest commit details.
     
