@@ -3,10 +3,12 @@ A fast, clean, Hugo theme with minimal dependencies.
 
 We've called it Peripheral because it is lightweight to reduce web-bloat introduced by the theme itself.
 
-## Live Demo
+## Example
 
-Example website: [https://myquay.github.io/hugo-theme-peripheral-example/](https://myquay.github.io/hugo-theme-peripheral-example/)
-Example website source: [https://github.com/myquay/hugo-theme-peripheral-example](https://github.com/myquay/hugo-theme-peripheral-example)
+
+Source code: [https://github.com/myquay/hugo-theme-peripheral-example](https://github.com/myquay/hugo-theme-peripheral-example)
+
+Life demo: [https://myquay.github.io/hugo-theme-peripheral-example/](https://myquay.github.io/hugo-theme-peripheral-example/)
 
 <img width="1040" alt="image" src="https://user-images.githubusercontent.com/629527/236664180-2ec38fa1-ecad-4ea5-9966-c9e2ab79ab7c.png">
 
