@@ -316,6 +316,14 @@ code {
 ****** LINKS ******
 ******************/
 
+.color-default{
+    color: #24292f;
+}
+
+.color-sub{
+    color: #74777a;
+}
+
 a {
     color: #292824;
     text-decoration: none;
@@ -324,6 +332,10 @@ a {
 
 a.active{
     font-weight: 700;
+}
+
+.post{
+    color: #24292f;
 }
 
 .post a{
@@ -350,6 +362,9 @@ h3{
 
 h4 a{
     word-break: break-word;
+}
+h1{
+    color: #24292f;
 }
 
 

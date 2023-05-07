@@ -2,8 +2,8 @@
 <html lang="{{.Lang}}">
 {{- partial "head.html" . -}}
 
-<body class="color-parchment">
-    <div id="content" class="m-auto">
+<body>
+    <div id="content" class="m-auto color-default">
         <div id="content-wrap">
             {{- partial "header.html" . -}}
 
@@ -35,7 +35,7 @@
                             <h3 class="mb-0"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title
                                     }}</a>
                             </h3>
-                            <span class="fs-sm">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</span>
+                            <span class="fs-sm color-sub">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</span>
                         </div>
                         {{ end }}
 

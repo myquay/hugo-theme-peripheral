@@ -2,7 +2,7 @@
 <html lang="{{.Lang}}">
 {{- partial "head.html" . -}}
 
-<body class="color-parchment">
+<body>
     <div id="content" class="m-auto">
         <div id="content-wrap">
             {{- partial "header.html" . -}}
@@ -36,7 +36,7 @@
                             <h3 class="mb-min"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title
                                     }}</a>
                             </h3>
-                            {{ .Summary }}
+                            <div class="color-sub">{{ .Summary }}</div>
                         </div>
                         {{ end }}
 

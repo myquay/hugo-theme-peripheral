@@ -1,31 +1,39 @@
 {{ define "main" }}
 
-<div class="p-1 border-bottom">
-    {{.Content}}
-</div>
-
 <div class="grid-md mb-2">
-    <div class="pt-1">
-        <a href="/blog"><h3>Blog posts</h3></a>
-        {{ $posts := (where .Site.RegularPages "Section" "post") }}
-        {{ range first 5 $posts }}
-        <div class="pb-1 pr-30-md pr-0">
-            <h4 class="mb-min"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title }}</a></h4>
-            {{ .Summary }}
+    <div class="p-1 color-default">
+
+        <div>
+            {{.Content}}
         </div>
-        {{ end }}
-        <a href="/blog">View older posts</a>
+        <div class="pb-1">
+            <a href="/fragments">
+                <h2>Fragments</h2>
+            </a>
+            {{ $posts := (where .Site.RegularPages "Section" "fragment") }}
+            {{ range first 5 $posts }}
+            <div class="pr-30-md pr-0">
+                <h3 class="mb-min"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <div class="color-sub">{{ .Summary }}</div>
+            </div>
+            {{ end }}
+        </div>
+        <a href="/fragments">View all</a>
     </div>
-    <div class="p-1">
-        <a href="/fragments"><h3>Fragments</h3></a>
-        {{ $posts := (where .Site.RegularPages "Section" "fragment") }}
-        {{ range first 5 $posts }}
-        <div class="pb-1 pr-30-md pr-0">
-            <h4 class="mb-min"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title }}</a></h4>
-            {{ .Summary }}
+    <div class="pt-1 color-default">
+        <div class="pb-1">
+            <a href="/blog">
+                <h2>Blog posts</h2>
+            </a>
+            {{ $posts := (where .Site.RegularPages "Section" "post") }}
+            {{ range first 5 $posts }}
+            <div class="pr-30-md pr-0">
+                <h3 class="mb-min"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <div class="color-sub">{{ .Summary }}</div>
+            </div>
+            {{ end }}
         </div>
-        {{ end }}
-        <a href="/fragments">View older posts</a>
+        <a href="/blog">View all</a>
     </div>
 </div>
 
