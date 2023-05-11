@@ -276,6 +276,10 @@ code {
     top: 0;
 }
 
+.grid-lhs{
+    grid-template-columns: clamp(250px, 30%, 300px) auto;
+}
+
 /*****************
 *** DECORATION ***
 *****************/
