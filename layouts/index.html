@@ -14,7 +14,8 @@
                 {{ $posts := (where .Site.RegularPages "Section" "fragment") }}
                 {{ range first 5 $posts }}
                 <div class="pr-30-md pr-0">
-                    <h5 class="mb-min"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title }}</a></h5>
+                    <h5 class="mb-0"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title }}</a></h5>
+                    <div class="color-sub fs-sm bold mb-min">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</div>
                     <div class="color-sub fs-sm">{{ .Summary }}</div>
                 </div>
                 {{ end }}
@@ -30,7 +31,8 @@
             {{ $posts := (where .Site.RegularPages "Section" "post") }}
             {{ range first 5 $posts }}
             <div class="pr-30-md pr-0">
-                <h3 class="mb-min"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <h3 class="mb-0"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <div class="color-sub fs-sm bold mb-min">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</div>
                 <div class="color-sub">{{ .Summary }}</div>
             </div>
             {{ end }}

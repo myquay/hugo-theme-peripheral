@@ -186,6 +186,10 @@ code {
     padding: 1rem;
 }
 
+.pt-2 {
+    padding-top: 2rem;
+}
+
 .ph-1{
     padding-right: 1rem;
     padding-left: 1rem;
@@ -202,6 +206,11 @@ code {
 .pb-3 {
     padding-bottom: 3rem;
 }
+
+.pb-6 {
+    padding-bottom: 6rem;
+}
+
 
 .pv-min {
     padding-bottom: 0.6rem;
@@ -427,7 +436,7 @@ p code{
     }
   
   #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
+    padding-bottom: 5rem;    /* Footer height */
   }
   
   #footer {
