@@ -482,6 +482,9 @@ p code{
   
   #content-wrap {
     padding-bottom: 40px;    /* Footer height */
+    
+    padding-left: 15px;
+    padding-right: 15px;
   }
   
   #footer {
@@ -520,6 +523,10 @@ body{
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);
+    }
+    .ph-1-md{
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
 }
 
