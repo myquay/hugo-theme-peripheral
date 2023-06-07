@@ -29,7 +29,7 @@
                     <div class="flex-grow-1">
 
                         {{ range $value := .Pages.GroupByDate "2006" }}
-                        <h2 id="section_{{.Key}}" class="ft-condense bolder sans-serif">{{ .Key }}</h2>
+                        <h2 id="section_{{.Key}}" class="text-condense bolder sans-serif">{{ .Key }}</h2>
 
                         {{ range .Pages }}
                         <div class="pb-1 pr-30-md pr-0">
@@ -46,7 +46,7 @@
                     <div class="hidden visible-md">
                         <ul class="list-no-style border-left pv-1 sticky">
                             {{ range $value := .Pages.GroupByDate "2006" }}
-                            <li class="mb-min"><a class="ft-condense bolder no-decoration sans-serif"
+                            <li class="mb-min"><a class="text-condense bolder no-decoration sans-serif"
                                     href="#section_{{.Key}}">{{ .Key
                                     }}</a></li>
                             {{ end }}
