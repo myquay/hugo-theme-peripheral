@@ -462,6 +462,9 @@ h1{
     color: #24292f;
 }
 
+.break-word{
+    word-break: break-word;
+}
 
 /******************
 ******* QUOTE *****

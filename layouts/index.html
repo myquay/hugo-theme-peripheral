@@ -34,7 +34,7 @@
                         {{ $posts := (where .Site.RegularPages "Section" "fragment") }}
                         {{ range first 5 $posts }}
                         <div class="pr-30-md pr-0">
-                            <h5 class="mb-0"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title
+                            <h5 class="mb-0"><a class="no-decoration sans-serif break-word" href="{{ .Permalink }}">{{ .Title
                                     }}</a>
                             </h5>
                             <div class="color-sub text-sm bold mb-min">{{.Date.Format
