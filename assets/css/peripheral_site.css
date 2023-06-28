@@ -363,8 +363,18 @@ code {
 *** DECORATION ***
 *****************/
 
+p code{
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    white-space: break-spaces;
+    background-color: rgba(175, 184, 193,0.2);
+    border-radius: 6px;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+}
+
 .border-all {
-    border: 1px solid rgba(0,0,0,.1);
+    border: 1px solid rgba(0,0,0,.1,0.2);
     border-radius: 3px;
 }
 
@@ -501,14 +511,6 @@ blockquote::before {
 
 pre{
     overflow-x: auto;
-}
-
-p code{
-    padding: 2px 4px;
-    font-size: 90%;
-    color: #d8dee9;
-    background-color: #2e3440;
-    border-radius: 4px;
 }
 
 /******************
