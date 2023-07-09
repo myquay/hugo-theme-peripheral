@@ -13,7 +13,7 @@ Life demo: [https://myquay.github.io/hugo-theme-peripheral-example/](https://myq
 <img width="1133" alt="image" src="https://github.com/myquay/hugo-theme-peripheral/assets/629527/6d12f2f8-03a7-45d5-be67-e063662c2654">
 
 ## Features
-The theme is designed to be lean and to celebrate the content. Infact, if you turn off Google Analytics there will be no JavaScript running.
+The theme is designed to be lean and to celebrate the content, infact there is even no JavaScript.
 
 ### Minimal dependencies
 No large frameworks have been used, just one custom CSS style sheet. This is to make the theme as small as possible so your blog can be reached by the people on a wide range of connection types. It's ridiculous the amount of data you need to download to read a news article these days.
@@ -74,7 +74,6 @@ Basic settings configuration things like the site title, if you want the Git int
     title = "..."
     themesDir = "themes"
     theme = "hugo-theme-peripheral"
-    googleAnalytics = "..."
     enableGitInfo = true
     DefaultContentLanguage = "en"
 
@@ -173,8 +172,7 @@ Example:
 
 This theme has minimal dependencies, on page load the following resources are requested
 
-* Site CSS file (all CSS resources concatenated to a single file 
-* Google Analytics, and subsequent events _(if enabled)_
+* Site CSS file (all CSS resources concatenated to a single file
 * favicon
 
 ## License
