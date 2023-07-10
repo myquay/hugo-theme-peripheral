@@ -27,11 +27,11 @@
         <div class="hidden visible-md">
             <div class="p-1 border-all">
                 <div class="pb-1">
-                    <a href="/fragments">
-                        <h2 class="mt-0 pb-1">Fragments</h2>
+                    <a href="/notes">
+                        <h2 class="mt-0 pb-1">Notes</h2>
                     </a>
                     <div class="mt-1">
-                        {{ $posts := (where .Site.RegularPages "Section" "fragment") }}
+                        {{ $posts := (where .Site.RegularPages "Section" "note") }}
                         {{ range first 5 $posts }}
                         <div class="pr-30-md pr-0">
                             <h5 class="mb-0"><a class="no-decoration sans-serif break-word" href="{{ .Permalink }}">{{ .Title
@@ -44,7 +44,7 @@
                         {{ end }}
                     </div>
                 </div>
-                <a class="red" href="/fragments">View all</a>
+                <a class="red" href="/notes">View all</a>
             </div>
         </div>
     </div>
