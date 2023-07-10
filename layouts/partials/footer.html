@@ -1,6 +1,6 @@
 {{ $section := "" }}
-{{ if eq .Section "fragment" }}
-    {{ $section = "fragments" }}
+{{ if eq .Section "note" }}
+    {{ $section = "notes" }}
 {{ else }}
     {{ $section = "blog" }}
 {{ end }}
