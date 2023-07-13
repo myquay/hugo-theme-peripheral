@@ -4,12 +4,12 @@
 
 <body>
     <div id="content" class="m-auto color-default">
-        <div id="content-wrap">
+        <div id="content-wrap" class="h-feed">
             {{- partial "header.html" . -}}
 
             <div class="flex flex-row mt-2">
                 <div class="flex-grow-1">
-                    <h1 id="notes" class="mv-0 sans-serif fs-xl">Notes</h1>
+                    <h1 id="notes" class="mv-0 sans-serif fs-xl p-name">Notes</h1>
                 </div>
                 <div class="flex align-center">
                     <a href="atom.xml" class="align-center">
@@ -30,8 +30,8 @@
                     <h2 id="section_{{.Key}}" class="text-condense bolder sans-serif">{{ .Key }}</h2>
 
                     {{ range .Pages }}
-                    <div class="pb-1 pr-30-md pr-0">
-                        <h3 class="mb-0"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title
+                    <div class="pb-1 pr-30-md pr-0 h-entry">
+                        <h3 class="mb-0"><a class="no-decoration sans-serif p-name" href="{{ .Permalink }}">{{ .Title
                                 }}</a>
                         </h3>
                         <span class="text-sm color-sub">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</span>
