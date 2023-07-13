@@ -48,6 +48,10 @@
     border-radius: 5px;
 }
 
+.circle {
+    border-radius: 50%;
+}
+
 code span {
     font-family: monospace !important;
 }
@@ -102,6 +106,14 @@ code {
 }
 
 /*****************
+***** LISTS *****
+*****************/
+
+ul {
+    list-style: none;
+}
+
+/*****************
 ***** LAYOUT *****
 *****************/
 
@@ -139,8 +151,20 @@ code {
     align-items: center;
 }
 
+.v-align-center {
+    align-content:center;
+}
+
 .align-end {
     align-items: end;
+}
+
+.align-start {
+    align-items: start;
+}
+
+.v-align-start {
+    align-content: start;
 }
 
 .m-auto {
