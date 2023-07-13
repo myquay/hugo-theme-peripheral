@@ -18,8 +18,8 @@
             </div>
 
 
-            <div class="pb-0 pt-1">
-                <h1 class="pb-0 mb-0 sans-serif text-4xl">{{.Title}}</h1>
+            <div class="pb-0 pt-1 h-entry">
+                <h1 class="pb-0 mb-0 sans-serif text-4xl p-name">{{.Title}}</h1>
                 <p class="mb-2 color-sub mt-1 text-sm">
                     {{.Date.Format .Site.Params.Peripheral.dateFormat}} &bull; {{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}
                 </p>
@@ -70,7 +70,7 @@
                 {{end}}
                 {{end}}
 
-                <div class="post">
+                <div class="post e-content">
                     {{.Content}}
                 </div>
 
