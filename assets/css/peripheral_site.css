@@ -113,6 +113,10 @@ ul {
     list-style: none;
 }
 
+.post ul {
+    list-style: disc;
+}
+
 /*****************
 ***** LAYOUT *****
 *****************/
