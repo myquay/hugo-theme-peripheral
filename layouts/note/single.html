@@ -20,11 +20,8 @@
             
             <div class="pb-0 pt-1 h-entry">
                 <h1 class="pb-0 mb-0 sans-serif text-4xl p-name">{{.Title}}</h1>
-                <p class="mv-0 color-sub mt-0">
-                    {{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}
-                </p>
-                <p class="mb-2 color-sub mt-0">
-                    {{.Date.Format .Site.Params.Peripheral.dateFormat}}
+                <p class="mb-2 color-sub mt-1 text-sm">
+                    <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</time> &bull; {{ if .Site.Params.Peripheral.IndieWeb }}<a rel="author" class="color-sub text-sm u-url p-author h-card" href='{{ trim .Page.Permalink "/"}}' style="font-weight: normal;">{{ .Site.Params.Peripheral.IndieWeb.name | safeHTML }}</a>{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}
                 </p>
 
 
