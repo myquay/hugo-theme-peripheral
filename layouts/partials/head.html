@@ -11,3 +11,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="description" content="{{ .Summary }}">
+
+{{ if isset .Site.Params.Peripheral.IndieWeb "authorization_endpoint" }}
+<link rel="authorization_endpoint" href="{{.Site.Params.Peripheral.IndieWeb.authorization_endpoint}}">
+{{ end }}
+
+{{ if isset .Site.Params.Peripheral.IndieWeb "token_endpoint" }}
+<link rel="token_endpoint" href="{{.Site.Params.Peripheral.IndieWeb.token_endpoint}}">
+{{ end }}
+
+{{ if isset .Site.Params.Peripheral.IndieWeb "indieauth_metadata" }}
+<link rel="indieauth-metadata" href="{{.Site.Params.Peripheral.IndieWeb.indieauth_metadata}}">
+{{ end }}
