@@ -59,13 +59,13 @@
                                         </svg>
                                         <a style="margin-left: 5px;" class="text-sm color-sub light"
                                             href="https://github.com/{{.Site.Social.github}}"
-                                            rel="me">{{.Site.Social.github}}</a>
+                                            rel='me {{if in .Site.Params.Peripheral.IndieWeb.auth "github" }}authn{{end}}'>{{.Site.Social.github}}</a>
                                     </div>
                                 </li>
                                 {{ end }}
                             </ul>
 
-                        <p class="text-center mt-1 mb-0 p-0 text-sm p-note">{{.Site.Params.Peripheral.IndieWeb.bio}}</p>
+                        <p class="text-center mt-1 mb-0 p-0 text-sm p-note">{{.Site.Params.Peripheral.IndieWeb.bio | .Page.RenderString}}</p>
                         </div>
                     </div>
                 </div>
