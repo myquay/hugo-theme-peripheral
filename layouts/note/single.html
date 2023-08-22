@@ -21,7 +21,7 @@
             <div class="pb-0 pt-1 h-entry">
                 <h1 class="pb-0 mb-0 sans-serif text-4xl p-name">{{.Title}}</h1>
                 <p class="mb-2 color-sub mt-1 text-sm">
-                    <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</time> &bull; {{ if .Site.Params.Peripheral.IndieWeb }}<a rel="author" class="color-sub text-sm u-url p-author h-card" href='{{ trim .Page.Permalink "/"}}' style="font-weight: normal;">{{ .Site.Params.Peripheral.IndieWeb.name | safeHTML }}</a>{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}
+                    {{ if .Site.Params.Peripheral.IndieWeb }}<span class="h-card u-author"><img style="height: 20px; width: 20px; margin-right: 5px; top: 5px; position: relative;" class="u-photo circle shadow" src='{{ absURL .Site.Params.Peripheral.IndieWeb.photo }}' /><a rel="author" class="color-sub text-sm u-url p-name" href='{{absURL ""}}' style="font-weight: normal;">{{ .Site.Params.Peripheral.IndieWeb.name | safeHTML }}</a></span>{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }} &bull; <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{.Date.Format .Site.Params.Peripheral.dateFormat}}</time>
                 </p>
 
 
