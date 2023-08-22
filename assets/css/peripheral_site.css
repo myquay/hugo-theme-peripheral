@@ -43,6 +43,10 @@
     font-weight: 300;
 }
 
+.font-normal {
+    font-weight: normal;
+}
+
 .highlight pre {
     padding: 15px;
     border-radius: 5px;
