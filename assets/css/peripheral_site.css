@@ -12,6 +12,29 @@
 }
 
 /*****************
+***** TABLE *****
+*****************/
+
+table{
+    border-collapse: collapse; 
+}
+
+table thead {
+    text-align: left;
+}
+
+table thead tr th{
+    border-bottom: 1px solid black;
+    padding: 4px 20px 4px 0;
+}
+
+table tbody tr td{
+    border-bottom: 1px solid grey;
+    padding: 4px 20px 4px 0;
+}
+
+
+/*****************
 ****** FONT *****
 *****************/
 
